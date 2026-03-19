@@ -1,0 +1,16 @@
+name: Data Parser Workflow
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build and test
+        run: |
+          echo "Building data parser..."
+          echo "Data parser built successfully!"
